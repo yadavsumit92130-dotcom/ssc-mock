@@ -1,30 +1,40 @@
 <!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SSC MOCK MASTER</title>
 <style>
-:root{--bg:#f6f8fc;--card:#fff;--ink:#14213d;--mut:#5b6784;--line:#dbe2ef;--acc:#1f4fbf;--accb:#e7eefc;--ok:#1a7f4b;--bad:#c0392b}
-@media(prefers-color-scheme:dark){:root{--bg:#0f1626;--card:#18223a;--ink:#e8edf8;--mut:#9aa7c4;--line:#2a3757;--acc:#6d9bff;--accb:#1d2b4d}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,"Noto Sans Devanagari",sans-serif}
-header{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;padding:8px 14px;z-index:5;flex-wrap:wrap}
-header b{color:var(--acc);font-size:18px}nav{margin-left:auto;display:flex;gap:2px;flex-wrap:wrap}
-nav button{border:0;background:none;color:var(--ink);font:inherit;padding:8px 10px;min-height:44px}nav .on{color:var(--acc);font-weight:700}
-main{max-width:960px;margin:0 auto;padding:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px}
-.btn,.chip{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:9px 14px;min-height:44px;cursor:pointer}
-.btn{background:var(--acc);color:#fff;border-color:var(--acc);font-weight:600}.btn.g{background:var(--card);color:var(--ink);border-color:var(--line)}.btn.r{background:var(--bad);border-color:var(--bad)}
+:root{--bg:#f3f6fc;--card:#fff;--ink:#0f1b3d;--mut:#62708f;--line:#e0e6f2;--acc:#1f4fbf;--accb:#e8eefc;--ok:#188a50;--bad:#c63d2f;--nav:#0f2a5c;--sh:0 4px 16px rgba(15,42,92,.08)}
+@media(prefers-color-scheme:dark){:root{--bg:#0c1322;--card:#151f36;--ink:#e8edf8;--mut:#9aa7c4;--line:#27344f;--acc:#7aa5ff;--accb:#1b2a4a;--nav:#0a1730;--sh:0 4px 16px rgba(0,0,0,.35)}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,"Noto Sans Devanagari",sans-serif}
+header{position:sticky;top:0;background:var(--nav);display:flex;align-items:center;gap:8px;padding:8px 14px;z-index:5;flex-wrap:wrap;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+header b{color:#fff;font-size:17px;letter-spacing:.04em}.logo{background:#f5c451;color:#0f2a5c;font-weight:800;border-radius:8px;padding:2px 9px;font-size:16px}
+nav{margin-left:auto;display:flex;gap:2px;flex-wrap:wrap}nav button{border:0;background:none;color:#c5d2f4;font:inherit;padding:8px 10px;min-height:44px;border-bottom:3px solid transparent}nav .on{color:#fff;font-weight:700;border-bottom-color:#f5c451}
+main{max-width:960px;margin:0 auto;padding:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px;box-shadow:var(--sh)}
+h2{margin:0 0 6px;font-size:21px}.hero{background:var(--nav);color:#fff;border-radius:18px;padding:18px;margin-bottom:14px;box-shadow:var(--sh)}
+.hero .lbl{color:#f5c451;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.hero p{margin:6px 0 4px;font-size:19px;font-weight:600;line-height:1.45}.hero .gr{color:#c5d2f4;font-size:14px}
+.btn,.chip{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:9px 14px;min-height:44px;cursor:pointer}
+.chip{border-radius:999px}.btn{background:var(--acc);color:#fff;border-color:var(--acc);font-weight:600}.btn.g{background:var(--card);color:var(--ink);border-color:var(--line)}.btn.r{background:var(--bad);border-color:var(--bad);color:#fff}
 .chip.on{background:var(--accb);border-color:var(--acc);color:var(--acc);font-weight:700}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.mut{color:var(--mut);font-size:14px}
-.opt{display:flex;gap:10px;width:100%;text-align:left;margin:8px 0;padding:12px;min-height:48px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit;cursor:pointer}
-.opt.on{border-color:var(--acc);background:var(--accb)}.opt.ok{border-color:var(--ok);background:rgba(26,127,75,.15)}.opt.no{border-color:var(--bad);background:rgba(192,57,43,.15)}
+.lb{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:16px 0 8px}
+.sg{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}@media(min-width:700px){.sg{grid-template-columns:repeat(4,1fr)}}
+.sc{display:flex;flex-direction:column;gap:10px;padding:14px;border:2px solid var(--line);border-radius:18px;background:var(--card);color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+.sc b{font-size:15px}.sc.on{border-color:var(--c);background:color-mix(in srgb,var(--c) 10%,var(--card))}
+.ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:25px;background:color-mix(in srgb,var(--c) 20%,transparent)}
+.opt{display:flex;gap:10px;width:100%;text-align:left;margin:8px 0;padding:12px;min-height:48px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);font:inherit;cursor:pointer}
+.opt.on{border-color:var(--acc);background:var(--accb)}.opt.ok{border-color:var(--ok);background:rgba(24,138,80,.15)}.opt.no{border-color:var(--bad);background:rgba(198,61,47,.15)}
 .tw{display:grid;gap:12px}@media(min-width:800px){.tw{grid-template-columns:1fr 250px}}
-.pal{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:6px}.pal button{min-height:40px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit}
+.pal{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:6px}.pal button{min-height:40px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit}
 .pal .a{background:var(--ok);color:#fff}.pal .m{background:#8a5cf6;color:#fff}.pal .am{background:var(--ok);color:#fff;outline:3px solid #8a5cf6}.pal .cur{border:2px solid var(--acc)}
 .big{font-size:40px;font-weight:700}.tag{font-size:12px;padding:2px 8px;border-radius:99px;background:var(--accb);color:var(--acc);margin-right:4px}
-input,select,textarea{font:inherit;width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);margin:4px 0}.err{color:var(--bad)}
+input,select,textarea{font:inherit;width:100%;padding:11px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);margin:4px 0}.err{color:var(--bad)}
 .grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.timer{font-weight:700;font-size:20px;font-variant-numeric:tabular-nums}
-</style></head><body><header><b>SSC MOCK MASTER</b><nav id="nav"></nav></header><main id="app"></main>
+</style></head><body><header><span class="logo">SSC</span><b>MOCK MASTER</b><nav id="nav"></nav></header><main id="app"></main>
 <script>
 const URL_='https://hlejjwuysewsfsurokul.supabase.co',KEY='sb_publishable_UVNel8sgrBnlvlYQds5d0A_B0houIzN';
 const $=s=>document.querySelector(s),e=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const SUB={M:'Mathematics',R:'Reasoning',G:'General Awareness',E:'English'},LG={hi:'हिंदी',hn:'Hinglish',en:'English'},DF={E:'Easy',M:'Medium',H:'Hard'};
 const GT=['History','Geography','Polity','Science','Art & Culture','Current Affairs','Computer'];
 function gt(t){const x=(t||'').toLowerCase();return /histor|इतिहास/.test(x)?'History':/geo|भूगोल/.test(x)?'Geography':/polit|polity|constitution|राजव्यवस्था/.test(x)?'Polity':/scien|विज्ञान/.test(x)?'Science':/art|cultur|कला|संस्कृति/.test(x)?'Art & Culture':/current|करंट/.test(x)?'Current Affairs':/comput|कंप्यूटर/.test(x)?'Computer':(t||'General')}
+const SC={M:'#2563eb',R:'#7c3aed',G:'#059669',E:'#ea580c'},SI={M:'➗',R:'🧩',G:'🌍',E:'📖'},TI={History:'🏛️',Geography:'🗺️',Polity:'⚖️',Science:'🔬','Art & Culture':'🎨','Current Affairs':'📰',Computer:'💻'};
+const QU=['रोज़ का अभ्यास ही कल की सफलता है।','हर Mock Test आपको चयन के एक कदम और करीब ले जाता है।','गलतियाँ सीखने का मौका हैं, हार नहीं।','इतनी मेहनत करो कि किस्मत को भी झुकना पड़े।','Consistency beats talent. आज भी practice करो।','आज का एक Test, कल की सफलता की नींव।','धैर्य रखो, मेहनत करते रहो — नतीजा ज़रूर आएगा।'];
+const qd=()=>QU[new Date().getDate()%QU.length];
 const qt=(q,l)=>q[l]||q.en||q.hi||q.hn||'';
 let S=JSON.parse(localStorage.getItem('smm_s')||'null'),v='set',msg='',T=null,R=null,rv=null,off=0,qi=0,tick=null,cs=0,busy=0,act=null,av=null,hl=[];
 let cfg={s:'M',l:'hi',n:10,m:10,t:'X'},isub='G',itp='X',adm={tab:'st',st:[],list:[],fs:'G',fst:'PENDING',bc:0};
@@ -49,15 +59,15 @@ const ch=(o,k,val,lab,cur)=>`<button class="chip ${cur==val?'on':''}" data-o="${
 function render(){const A=$('#app');
 $('#nav').innerHTML=S?[['set','Mock Test'],['hist','History']].concat(S.admin?[['adm','Admin']]:[]).map(([k,n])=>`<button class="${v==k?'on':''}" onclick="go('${k}')">${n}</button>`).join('')+`<button onclick="out()">Logout</button>`:'';
 if(!S)return authv(A);({set:setv,test:testv,res:resv,hist:histv,adm:admv})[v](A);window.scrollTo(0,0)}
-function authv(A){A.innerHTML=`<div class="card"><h2>Login / Register</h2><p class="mut">Student account (email + password)</p><input id="nm" placeholder="Name (for Register)"><input id="em" type="email" placeholder="Email"><input id="pw" type="password" placeholder="Password (min 6)">${msg?`<p class="err">${e(msg)}</p>`:''}<div class="row"><button class="btn" onclick="auth('in')">Login</button><button class="btn g" onclick="auth('up')">Register</button></div></div>`}
+function authv(A){A.innerHTML=`<div class="hero" style="text-align:center"><div style="font-size:36px">🎯</div><b style="font-size:22px;letter-spacing:.04em">SSC MOCK MASTER</b><p>${qd()}</p></div><div class="card"><h2>Login / Register</h2><p class="mut">Student account (email + password)</p><input id="nm" placeholder="Name (for Register)"><input id="em" type="email" placeholder="Email"><input id="pw" type="password" placeholder="Password (min 6)">${msg?`<p class="err">${e(msg)}</p>`:''}<div class="row"><button class="btn" onclick="auth('in')">Login</button><button class="btn g" onclick="auth('up')">Register</button></div></div>`}
 async function setv(A){
-A.innerHTML=`${msg?`<div class="card err">${e(msg)}</div>`:''}<div id="ra"></div><div class="card"><h2>Mock Test</h2>
-<p class="mut">Subject</p><div class="row">${Object.entries(SUB).map(([k,n])=>ch('c','s',k,n,cfg.s)).join('')}</div>
-${cfg.s=='G'?`<p class="mut">GK topic</p><div class="row">${GT.map(t=>ch('c','t',t,t,cfg.t)).join('')}${ch('c','t','X','Mix (all topics)',cfg.t)}</div>`:''}
-<p class="mut">Language / भाषा</p><div class="row">${Object.entries(LG).map(([k,n])=>ch('c','l',k,n,cfg.l)).join('')}</div>
-<p class="mut">Questions</p><div class="row">${[10,20,30,40,50,100].map(n=>ch('c','n',n,n,cfg.n)).join('')}</div>
-<p class="mut">Time</p><div class="row">${[10,20,30,40,60].map(n=>ch('c','m',n,n+' min',cfg.m)).join('')}</div>
-<p id="av" class="mut">Checking availability…</p><button class="btn" onclick="start()">START TEST</button></div>`;
+A.innerHTML=`${msg?`<div class="card err">${e(msg)}</div>`:''}<div class="hero"><span class="lbl">आज की प्रेरणा</span><p>${qd()}</p><span class="gr">नमस्ते, ${e((S&&S.name)||'')} 👋</span></div><div id="ra"></div><div class="card"><h2>अपना Mock Test बनाएँ</h2>
+<p class="lb">1 · Subject चुनें</p><div class="sg">${Object.entries(SUB).map(([k,n])=>`<button class="sc ${cfg.s==k?'on':''}" style="--c:${SC[k]}" data-o="c" data-k="s" data-v="${k}" onclick="st(this)"><span class="ic">${SI[k]}</span><b>${n}</b></button>`).join('')}</div>
+${cfg.s=='G'?`<p class="lb">GK Topic</p><div class="row">${GT.map(t=>ch('c','t',t,(TI[t]||'')+' '+t,cfg.t)).join('')}${ch('c','t','X','🔀 Mix (all topics)',cfg.t)}</div>`:''}
+<p class="lb">2 · Language / भाषा</p><div class="row">${Object.entries(LG).map(([k,n])=>ch('c','l',k,n,cfg.l)).join('')}</div>
+<p class="lb">3 · Questions</p><div class="row">${[10,20,30,40,50,100].map(n=>ch('c','n',n,n,cfg.n)).join('')}</div>
+<p class="lb">4 · Time</p><div class="row">${[10,20,30,40,60].map(n=>ch('c','m',n,n+' min',cfg.m)).join('')}</div>
+<p id="av" class="mut" style="margin-top:14px">Checking availability…</p><button class="btn" style="width:100%;margin-top:6px;font-size:17px;min-height:50px" onclick="start()">START TEST →</button></div>`;
 try{const n=await rpc('available',{p_subject:cfg.s,p_topic:cfg.s=='G'?cfg.t:'X'});const el=$('#av');if(el)el.innerHTML=`<b>${n}</b> verified questions available`+(n<cfg.n?` — only ${n} will be used`:'')}catch(x){}
 try{if(!act){const a=await api('/rest/v1/tests?submitted_at=is.null&ends_at=gt.'+encodeURIComponent(new Date().toISOString())+'&select=id,subject&limit=1');act=a[0]||0}
 if(act&&$('#ra'))$('#ra').innerHTML=`<div class="card"><b>You have a running test.</b> <button class="btn" onclick="resume('${act.id}')">Resume Test</button></div>`}catch(x){}}
@@ -81,16 +91,16 @@ function mark(){const m=mk(),id=T.questions[qi].id;m[id]=!m[id];localStorage.set
 async function fin(auto){if(busy)return;busy=1;clearInterval(tick);try{R=await rpc('submit_test',{tid:T.id});R.id=T.id;rv=T.id;act=null;msg=auto?"Time's up! Your test has been submitted automatically.":'';v='res'}catch(x){busy=0;msg=x.message}render()}
 async function resv(A){if(!R||R.id!=rv){A.innerHTML='<p>Loading…</p>';try{R=await rpc('get_result',{tid:rv});R.id=rv}catch(x){msg=x.message;return go('set')}}
 const d=R.details||[],tp={},df={};d.forEach(x=>{[[tp,x.topic],[df,x.difficulty]].forEach(([o,k])=>{o[k]=o[k]||[0,0];if(x.given!=null){o[k][0]++;if(x.given==x.answer)o[k][1]++}})});
-const att=R.correct+R.wrong,pc=(c,a)=>a?(c/a*100).toFixed(0):0,L=R.lang||'hi',mn=(R.used_sec/60|0)+':'+String(R.used_sec%60).padStart(2,'0');
-A.innerHTML=`${msg?`<div class="card err">${e(msg)}</div>`:''}<div class="card"><h2>Test Completed</h2><div class="big">${(+R.score).toFixed(2)} / ${R.max}</div><p>Accuracy ${pc(R.correct,att)}% · Correct ${R.correct} · Incorrect ${R.wrong} · Skipped ${R.skipped}<br>Time used ${mn}${R.minutes?' / '+R.minutes+' min':''}</p><div class="row"><button class="btn" onclick="go('set')">NEW MOCK TEST</button><button class="btn g" onclick="go('hist')">HISTORY</button></div></div>
+const att=R.correct+R.wrong,pc=(c,a)=>a?(c/a*100).toFixed(0):0,L=R.lang||'hi',mn=(R.used_sec/60|0)+':'+String(R.used_sec%60).padStart(2,'0');const acc=+pc(R.correct,att),mt=acc>=80?'🎉 शानदार प्रदर्शन! ऐसे ही लगे रहो।':acc>=50?'👍 अच्छा प्रयास! Review करके और बेहतर बनाओ।':'💪 हार मत मानो — हर गलती एक नया सबक है।';
+A.innerHTML=`${msg?`<div class="card err">${e(msg)}</div>`:''}<div class="card"><h2>Test Completed</h2><p><b>${mt}</b></p><div class="big">${(+R.score).toFixed(2)} / ${R.max}</div><p>Accuracy ${pc(R.correct,att)}% · Correct ${R.correct} · Incorrect ${R.wrong} · Skipped ${R.skipped}<br>Time used ${mn}${R.minutes?' / '+R.minutes+' min':''}</p><div class="row"><button class="btn" onclick="go('set')">NEW MOCK TEST</button><button class="btn g" onclick="go('hist')">HISTORY</button></div></div>
 <div class="card"><h2>Performance</h2>${Object.entries(df).map(([k,[a,c]])=>`<p>${DF[k]||k}: ${c}/${a} (${pc(c,a)}%)</p>`).join('')}${Object.entries(tp).map(([k,[a,c]])=>`<p>${e(k)}: ${c}/${a} (${pc(c,a)}%)</p>`).join('')}</div><h2>Question-wise review</h2>
 ${d.map((x,i)=>`<div class="card"><b>Q${i+1}</b> <span class="tag">${x.given==null?'Not attempted':x.given==x.answer?'Correct':'Incorrect'}</span><p>${e(qt(x.q,L))}</p>${x.options.map((o,j)=>`<div class="opt ${j==x.answer?'ok':j===x.given?'no':''}"><b>${'ABCD'[j]}</b>${e(o)}</div>`).join('')}<p class="mut">आपका उत्तर: ${x.given==null?'—':'ABCD'[x.given]} · सही उत्तर: ${'ABCD'[x.answer]}<br>व्याख्या: ${e(x.explanation||'—')}</p></div>`).join('')}`}
 async function histv(A){A.innerHTML='<p>Loading…</p>';try{hl=await api('/rest/v1/tests?submitted_at=not.is.null&select=id,subject,topic,started_at,result&order=started_at.desc&limit=50')}catch(x){hl=[]}
-A.innerHTML=`<h2>My History</h2>${hl.map(t=>{const r=t.result||{},a=(r.correct||0)+(r.wrong||0);return `<div class="card row" style="justify-content:space-between"><span>${new Date(t.started_at).toLocaleDateString()} · ${SUB[t.subject]||''}${t.topic&&t.topic!='X'?' · '+e(t.topic):''} · ${r.total}Q<br><b>${(+r.score).toFixed(2)}/${r.max}</b> · ${a?(r.correct/a*100).toFixed(0):0}%</span><button class="btn g" onclick="rv='${t.id}';R=null;go('res')">View result</button></div>`}).join('')||'<p class="mut">No tests yet.</p>'}`}
+A.innerHTML=`<h2>My History</h2>${hl.map(t=>{const r=t.result||{},a=(r.correct||0)+(r.wrong||0);return `<div class="card row" style="justify-content:space-between"><span>${new Date(t.started_at).toLocaleDateString()} · ${SI[t.subject]||''} ${SUB[t.subject]||''}${t.topic&&t.topic!='X'?' · '+e(t.topic):''} · ${r.total}Q<br><b>${(+r.score).toFixed(2)}/${r.max}</b> · ${a?(r.correct/a*100).toFixed(0):0}%</span><button class="btn g" onclick="rv='${t.id}';R=null;go('res')">View result</button></div>`}).join('')||'<p class="mut">No tests yet.</p>'}`}
 async function admv(A){if(!S.admin){A.innerHTML='<div class="card">Admin only.</div>';return}
 const tabs=[['st','Folders'],['rv','Review'],['im','Import']].map(([k,n])=>`<button class="chip ${adm.tab==k?'on':''}" onclick="adm.tab='${k}';msg='';render()">${n}</button>`).join('');let b='';
 if(adm.tab=='st'){try{adm.st=await rpc('admin_stats')}catch(x){msg=x.message}
-b=`<div class="grid">${Object.entries(SUB).map(([k,n])=>{const a=adm.st.filter(x=>x.subject==k),c=s=>a.filter(x=>x.status==s).reduce((t,x)=>t+x.n,0),tp={};a.forEach(x=>tp[x.topic]=(tp[x.topic]||0)+x.n);return `<div class="card"><b>📁 ${n}</b><div class="big">${a.reduce((t,x)=>t+x.n,0)}</div><span class="mut">Verified ${c('VERIFIED')} · Pending ${c('PENDING')} · Uncertain ${c('UNCERTAIN')} · Rejected ${c('REJECTED')}<br>${Object.entries(tp).map(([t,x])=>e(t)+' '+x).join(' · ')}</span></div>`}).join('')}</div>`}
+b=`<div class="grid">${Object.entries(SUB).map(([k,n])=>{const a=adm.st.filter(x=>x.subject==k),c=s=>a.filter(x=>x.status==s).reduce((t,x)=>t+x.n,0),tp={};a.forEach(x=>tp[x.topic]=(tp[x.topic]||0)+x.n);return `<div class="card"><b>${SI[k]} ${n}</b><div class="big">${a.reduce((t,x)=>t+x.n,0)}</div><span class="mut">Verified ${c('VERIFIED')} · Pending ${c('PENDING')} · Uncertain ${c('UNCERTAIN')} · Rejected ${c('REJECTED')}<br>${Object.entries(tp).map(([t,x])=>e(t)+' '+x).join(' · ')}</span></div>`}).join('')}</div>`}
 if(adm.tab=='rv'){try{adm.list=await api(`/rest/v1/questions?subject=eq.${adm.fs}&status=eq.${adm.fst}&select=*&order=created_at.desc&limit=30`)}catch(x){msg=x.message;adm.list=[]}
 b=`<div class="row">${Object.entries(SUB).map(([k,n])=>ch('a','fs',k,n,adm.fs)).join('')}</div><div class="row" style="margin:8px 0">${['PENDING','UNCERTAIN','VERIFIED','REJECTED'].map(s=>ch('a','fst',s,s,adm.fst)).join('')}</div>
 <p><button class="btn g" onclick="bulk()">${adm.bc?'Tap again: verify ALL pending in '+SUB[adm.fs]:'Verify all pending in '+SUB[adm.fs]}</button></p>`+adm.list.map(q=>`<div class="card"><span class="tag">${e(q.topic)} · ${DF[q.difficulty]}</span><span class="tag">${q.status}</span><p>${e(qt(q.q,'hi'))}</p><p class="mut">${q.options.map((o,j)=>`${'ABCD'[j]}) ${e(o)}`).join(' · ')}<br>Source: ${e(q.source||'—')} ${e(q.exam||'')}</p><div class="row"><span class="mut">Correct:</span>${[0,1,2,3].map(j=>`<button class="chip ${q.answer==j?'on':''}" onclick="sa('${q.id}',${j})">${'ABCD'[j]}</button>`).join('')}</div><div class="row" style="margin-top:6px"><button class="btn" onclick="ss('${q.id}','VERIFIED')">VERIFY</button><button class="btn g" onclick="ss('${q.id}','UNCERTAIN')">FLAG</button><button class="btn r" onclick="ss('${q.id}','REJECTED')">REJECT</button></div></div>`).join('')||'<p class="mut">Nothing here.</p>'}
