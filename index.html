@@ -138,4 +138,5 @@ if(ai<0)noa++;out.push({subject:isub,topic:isub=='G'?(itp!='X'?itp:gt(p[7])):(p[
 try{for(let i=0;i<out.length;i+=100){const r=await api('/rest/v1/questions?on_conflict=qhash',{m:'POST',b:out.slice(i,i+100),h:{Prefer:'resolution=ignore-duplicates,return=representation'}});ok+=r.length}dup=out.length-ok;
 msg=`<b>${ok?'✓ '+ok+' of '+rows.length+' questions imported into '+SUB[isub]+(iver?' (verified)':' (pending review)'):'✗ Nothing imported'}</b><br>Duplicates skipped ${dup} · Missing answer ${noa} · Invalid ${bad}`;$('#imp')&&($('#imp').value='')}catch(x){msg='Import failed: '+e(x.message)}render()}
 render();
+(function(){const l=document.createElement('link');l.rel='manifest';l.href='manifest.json';document.head.appendChild(l);const m=document.createElement('meta');m.name='theme-color';m.content='#0f2a5c';document.head.appendChild(m);if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js')})();
 </script></body></html>
